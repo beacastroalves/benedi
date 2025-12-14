@@ -398,7 +398,7 @@ header::before {
 
 .pricing-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 40px;
   margin-top: 50px;
 }
@@ -531,7 +531,7 @@ header::before {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 500px;
+  max-height: 1000px;
   padding: 0 32px 24px;
 }
 
@@ -610,6 +610,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .logo {
     font-size: 2rem;
   }
@@ -632,7 +637,7 @@ footer {
   }
 
   .pricing-card.featured {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 
   footer {
