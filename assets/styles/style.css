@@ -153,8 +153,8 @@ main {
       flex-direction: column;
       gap: 16px;
       padding: 0 24px;
-      max-width: 672px;
       margin: 0 auto;
+      max-width: 672px;
     }
 
     .welcome-cards {
@@ -217,6 +217,7 @@ main {
       background: #F7C4CE;
       background: linear-gradient(135deg, rgba(var(--app-color-pink-rgb), 0.5) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(var(--app-color-yellow-rgb), 0.5) 100%);
     }
+
     .impact-line {
       position: relative;
 
@@ -226,6 +227,7 @@ main {
         padding: 48px 24px;
         color: var(--app-color-white);
         line-height: 1.3;
+        max-width: 376px;
 
         .highlight-y {
           color: var(--app-color-yellow);
@@ -337,8 +339,6 @@ main {
       }
     }
   }
-
-  
 }
 
 
@@ -381,7 +381,7 @@ main {
       .impact-line {
         h1 {
           font-size: 48px;
-          max-width: 700px;
+          max-width: 675px;
         }
       }
     }
@@ -415,29 +415,50 @@ main {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 56px;
+    font-size: 60px;
   }
-
-  p {
-
-  }
-
+  
   main {
-    .impact {
-      height: 512px;
+    .welcome {
+      .welcome-text {
+        h1 {
+          font-size: 48px;
+          max-width: 900px;
+        }
+      }
+    }
+      .impact {
+      height: 568px;
 
       .impact-line {
         h1 {
-          font-size: 64px;
-          max-width: 1024px;
+          max-width: 700px;
         }
       }
     }
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   h1 {
-    font-size: 60px;
+    font-size: 72px;
+  }
+
+  main {
+    .welcome {
+      .welcome-text {
+        h1 {
+          font-size: 56px;
+          max-width: 900px;
+        }
+      }
+    }
+
+    .impact {
+      .impact-line > h1 {
+        max-width: 1000px;
+        font-size: 68px;
+      }
+    }
   }
 }
