@@ -145,8 +145,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin: 64px 0;
+    margin: 64px auto;
     text-align: center;
+    position: relative;
+    width: 100%;
 
     .welcome-text {
       display: flex;
@@ -158,15 +160,12 @@ main {
     }
 
     .welcome-cards {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 32px;
-      align-items: center;
-      justify-content: center;
-      max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
-      text-align: initial;
+      max-width: 400px;
 
       .welcome-card {
         display: flex;
@@ -177,6 +176,7 @@ main {
         background-color: rgba(var(--app-color-yellow-rgb), 0.15);
         border: 1px solid transparent;
         border-radius: 16px;
+        text-align: initial;
 
         p:first-child {
           font-size: 48px;
@@ -184,6 +184,7 @@ main {
 
         p:last-child {
           color: #434343;
+          line-height: 1.4;
         }
       }
 
@@ -381,8 +382,8 @@ main {
     .find-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
       padding: 0 24px;
-      gap: 24px;
       margin: 0 auto;
       max-width: 400px;
 
@@ -393,8 +394,18 @@ main {
         background-color: var(--app-color-white);
         padding: 24px;
         border-radius: 16px;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
         width: 100%;
+
+        .find-card-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px;
+          width: fit-content;
+          font-size: 28px;
+          border-radius: 12px;
+        }
 
         .find-card-title {
           span {
@@ -408,19 +419,12 @@ main {
           line-height: 1.4;
         }
       }
-      
+
       .find-card:nth-child(1),
       .find-card:nth-child(4),
       .find-card:nth-child(7) {
         .find-card-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background-color: var(--app-color-blue);
-          padding: 16px;
-          width: fit-content;
-          font-size: 28px;
-          border-radius: 12px;
         }
       }
 
@@ -428,14 +432,7 @@ main {
       .find-card:nth-child(5),
       .find-card:nth-child(8) {
         .find-card-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background-color: var(--app-color-pink);
-          padding: 16px;
-          width: fit-content;
-          font-size: 28px;
-          border-radius: 12px;
         }
       }
 
@@ -443,14 +440,22 @@ main {
       .find-card:nth-child(6),
       .find-card:nth-child(9) {
         .find-card-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background-color: var(--app-color-yellow);
-          padding: 16px;
-          width: fit-content;
-          font-size: 28px;
-          border-radius: 12px;
+        }
+      }
+
+      .find-card:hover {
+        border-color: var(--app-color-yellow-shade);
+        transition: 0.35s;
+        transform: scale(1.08);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15);
+
+        .find-card-icon {
+          transform: scale(1.1);
+          font-size: 40px;
+          transition: 0.45s;
+          padding: 6px;
+          border-radius: 50%;
         }
       }
     }
@@ -469,15 +474,7 @@ main {
 
 @media screen and (min-width: 500px) {
   main {
-    .welcome {
-      .welcome-cards {
-        flex-flow: row wrap;
-        .welcome-card {
-          height: 365px;
-          flex: 0 1 360px;
-        }
-      }
-    }
+    
   }
 }
 
@@ -527,10 +524,9 @@ main {
       }
     }
 
-    .find {
-      .find-cards {
-        max-width: 800px;
-      }
+    .welcome > .welcome-cards,
+    .find > .find-cards {
+        max-width: 768px;
     }
   }
 }
@@ -547,6 +543,9 @@ main {
           font-size: 48px;
           max-width: 900px;
         }
+      }
+      .welcome-cards {
+        max-width: 1096px;
       }
     }
       .impact {
