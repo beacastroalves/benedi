@@ -464,7 +464,6 @@ main {
       }
 
       .find-card:hover {
-        border-color: var(--app-color-yellow-shade);
         transform: scale(1.08);
         box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.15);
 
@@ -586,6 +585,7 @@ main {
         border-radius: 24px;
         margin: 0 auto 24px;
         border: 1px solid rgba(var(--app-color-blue-rgb), 0.3);
+        box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.25);
 
         p {
           line-height: 1.5;
@@ -626,6 +626,20 @@ main {
           .active-title {
             width: fit-content;
             margin: 0 auto;
+          }
+        }
+
+        .active-item:hover {
+          transform: scale(1.08);
+          .active-icon {
+            transform: scale(1.1);
+            font-size: 40px;
+            padding: 8px;
+            box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
+
+            .up {
+              transform: translateY(-6px);
+            }
           }
         }
       }
