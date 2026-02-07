@@ -1,4 +1,4 @@
-@import url(./variable.css);
+@import url(variable.css);
 
 * {
   box-sizing: border-box;
@@ -413,7 +413,7 @@ main {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 32px;
-      padding: 0 24px;
+      /* padding: 0 24px; */
       margin: 0 auto;
       max-width: 400px;
 
@@ -494,7 +494,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 32px 0;
+    padding: 32px 24px;
     margin: 0;
 
     .not-alone-container {
@@ -503,6 +503,7 @@ main {
       align-items: center;
       gap: 16px;
       max-width: 600px;
+      width: 100%;
       text-align: center;
       padding: 32px;
       line-height: 1.4;
@@ -705,125 +706,6 @@ main {
       }
     }
   }
-
-  /* .options {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px;
-    text-align: center;
-    background: var(--app-color-yellow);
-    background: linear-gradient(180deg, rgba(var(--app-color-yellow-rgb), 0) 0%, rgba(var(--app-color-yellow-rgb), 0.2) 100%);
-
-
-    .options-intro {
-      .description {
-        margin: 16px 0 24px;
-      }
-    }
-
-    .options-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-
-      .options-card {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        border-radius: 16px;
-        padding: 32px;
-        text-align: initial;
-        display: flex;
-        flex-direction: column;
-        border: 2px solid transparent;
-        transition: 0.45s;
-
-        .options-card-title {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          span {
-            color: var(--app-color-blue);
-            font-weight: 500;
-          }
-
-        }
-
-        ul {
-          line-height: 1.2;
-          height: 100%;
-          width: 100%;
-
-          li {
-            display: flex;
-            gap: 16px;
-            list-style-type: none;
-            padding: 16px 16px 16px 0;
-            border-radius: 16px;
-            color: rgba(var(--app-color-black-rgb), 0.65);
-          }
-
-          li span::before {
-            content: '✓';
-            padding: 4px 8px;
-            border-radius: 50%;
-            color: var(--app-color-pink);
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-            font-weight: bold;
-          }
-        }
-      }
-
-      .options-card-button {
-        width: 100%;
-        text-align: center;
-
-        a.btn {
-          display: block;
-          width: 100%;
-          border: 2px solid transparent;
-        }
-
-        a.btn-primary-p:hover {
-          background: var(--app-color-pink-shade);
-        }
-
-        a.btn-primary-b:hover {
-          background: var(--app-color-blue-shade);
-          color: var(--app-color-blue-contrast);
-        }
-      }
-    }
-
-    .options-card:nth-child(1) {
-      background: var(--app-color-blue);
-      background: linear-gradient(145deg, rgba(var(--app-color-blue-rgb), 0.2) 0%, rgba(var(--app-color-white-rgb), 0.5) 100%);
-      border-color: var(--app-color-blue);
-
-
-      ul {
-        li span::before {
-          color: var(--app-color-blue);
-        }
-      }
-    }
-
-    .options-card:nth-child(2) {
-      background: var(--app-color-pink);
-      background: linear-gradient(145deg, rgba(var(--app-color-pink-rgb), 0.3) 0%, rgba(var(--app-color-yellow-rgb), 0.3) 100%);
-      border-color: var(--app-color-pink);
-    }
-
-  } */
-
-  /* .separador-options {
-    height: 96px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(var(--app-color-yellow-rgb), 0.2) 0%, rgba(var(--app-color-pink-rgb), 0.1) 50%);
-  } */
 
   .price {
     display: flex;
@@ -1172,7 +1054,7 @@ main {
 
     &::before {
       content: '';
-      background: url(../images/bg/tiles.jpg);
+      background: url(.images/bg/tiles.jpg);
       background-size: 150px;
       position: absolute;
       top: 0;
@@ -1325,7 +1207,7 @@ main {
     .find {
       .find-cards {
         grid-template-columns: repeat(2, minmax(300px, 1fr));
-        max-width: 768px;
+        max-width: 700px;
       }
     }
 
@@ -1372,27 +1254,6 @@ main {
         }
       }
     }
-
-    /* .options {
-      .options-cards {
-        gap: 32px;
-        max-width: 1024px;
-        flex-direction: row-reverse;
-        margin: 0 auto;
-
-        .options-card {
-          ul {
-            li {
-              font-size: 18px;
-            }
-          }
-        }
-
-        .options-card:nth-child(2):hover {
-          transform: scale(1.03);
-        }
-      }
-    } */
 
     .price {
       .price-intro {
@@ -1466,9 +1327,9 @@ main {
   main {
     .welcome {
       .welcome-text {
+        max-width: 900px;
         h1 {
           font-size: 48px;
-          max-width: 900px;
         }
       }
 
@@ -1509,7 +1370,7 @@ main {
     .not-alone {
       .not-alone-container {
         font-size: 36px;
-        max-width: 1024px;
+        max-width: 1200px;
         padding: 32px 64px;
       }
     }
