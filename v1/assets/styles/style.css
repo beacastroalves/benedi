@@ -890,7 +890,21 @@ main {
         margin: 0 auto;
 
         span {
-          text-shadow: 1px 1px 4px rgba(var(--app-color-black-rgb), 0.2);
+          text-shadow: 1px 1px 2px rgba(var(--app-color-black-rgb), 0.3);
+          position: relative;
+
+        &.highlight::before {
+            content: '';
+            bottom: 12%;
+            left: -4px;
+            width: 100%;
+            height: 6px;
+            padding: 0 4px;
+            position: absolute;
+            background-color: rgba(var(--app-color-black-rgb), 0.2);
+            border-radius: 50%;
+            z-index: -1;
+          }
         }
       }
 
@@ -1054,15 +1068,149 @@ main {
 
     &::before {
       content: '';
-      background: url(.images/bg/tiles.jpg);
+      background: url(../images/bg/tiles.jpg);
       background-size: 150px;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      filter: opacity(0.3) grayscale(1) brightness(2);
+      filter: opacity(0.2) grayscale(1) brightness(2);
       z-index: -1;
+    }
+  }
+
+  .about-nat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 24px;
+    text-align: center;
+
+    .about-intro {
+      h1 {
+        margin-bottom: 16px;
+      }
+    }
+
+    .about-cards-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: initial;
+      max-width: 1024px;
+      gap: 24px;
+      max-width: 450px;
+
+      .about-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 608px;
+          object-fit: cover;
+          border-radius: 16px;
+          box-shadow: 4px 24px 24px -12px rgba(var(--app-color-black-rgb), 0.25);
+          border: 8px solid white;
+        }
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: calc(100% - 40px);
+          height: calc(100% - 40px);
+          border-radius: 16px;
+          background-color: #131313;
+          background: linear-gradient(-45deg, rgba(var(--app-color-yellow-rgb), 0.3) 0%, rgba(var(--app-color-blue-rgb), 0.3) 100%);
+          transform: rotateZ(-2deg);
+          z-index: -1;
+        }
+        
+        &::after {
+          content: 'Fundadora da BENEDI';
+          position: absolute;
+          bottom: 14px;
+          left: 10px;
+          width: 160px;
+          height: auto;
+          text-align: center;
+          font-weight: bold;
+          padding: 16px;
+          border-radius: 8px;
+          font-size: 14px;
+          background-color: var(--app-color-yellow);
+          transform: rotateZ(-5deg);
+          box-shadow: 0 24px 20px -10px rgba(var(--app-color-black-rgb), 0.35);
+          z-index: 3;
+        }
+      }
+
+      .about-info-items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        
+        .about-info-item {
+          padding: 16px 16px 16px 32px;
+          border: 2px solid var(--app-color-blue);
+          border-radius: 16px;
+          position: relative;
+          background-color: rgba(var(--app-color-blue-rgb), 0.07);
+          box-shadow: 0 24px 24px -12px rgba(var(--app-color-black-rgb), 0.15);
+          transition: 0.45s;
+          
+          p {
+            line-height: 1.4;
+            color: rgba(var(--app-color-black-rgb), 0.7);
+            
+            span {
+              &:nth-child(2) {
+                font-weight: bolder;
+                border-bottom: 2px solid transparent;
+                border-color: var(--app-color-blue);;
+              }
+            }
+          }
+          
+          &::before {
+            content: '';
+            position: absolute;
+            top: calc(50% - 16px);
+            left: -16px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--app-color-blue);
+            z-index: -1;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 12px);
+            left: -12px;
+            width: 16px;
+            height: 16px;
+            z-index: 1;
+            transform: translate(4px, 4px);
+            background-image: url("../images/emogis/comment.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          
+          &:hover {
+            box-shadow: 0 24px 24px -12px rgba(var(--app-color-black-rgb), 0.25);
+          }
+        }
+      }
     }
   }
 }
@@ -1386,10 +1534,32 @@ main {
         }
       }
     }
+
+    .about-nat {
+      .about-cards-wrap {
+        flex-direction: row;
+        gap: 0;
+        max-width: 1024px;
+
+        .about-img {
+          padding: 24px;
+          max-width: 800px;
+        }
+
+        .about-info-items {
+          padding: 24px;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 1200px) {
+
+  h2 {
+    font-size: 36px;
+  }
+
   main {
     .welcome {
       .welcome-text {
