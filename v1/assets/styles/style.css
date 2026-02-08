@@ -520,6 +520,7 @@ main {
         background: linear-gradient(135deg, rgba(var(--app-color-yellow-rgb), 1) 0%, rgba(var(--app-color-pink-rgb), 1) 100%);
         box-shadow: 0 24px 25px -12px rgba(0, 0, 0, 0.25);
         transform: rotateZ(5deg);
+
         img {
           width: 60px;
           transition-duration: 0.75s;
@@ -547,9 +548,10 @@ main {
             z-index: 2;
           }
 
-          
+
         }
       }
+
       a {
         font-size: 16px;
       }
@@ -884,7 +886,7 @@ main {
           text-shadow: 1px 1px 2px rgba(var(--app-color-black-rgb), 0.3);
           position: relative;
 
-        &.highlight::before {
+          &.highlight::before {
             content: '';
             bottom: 12%;
             left: -4px;
@@ -1090,9 +1092,8 @@ main {
       flex-direction: column;
       align-items: center;
       text-align: initial;
-      max-width: 1024px;
       gap: 24px;
-      max-width: 450px;
+      max-width: 500px;
 
       .about-img {
         display: flex;
@@ -1109,7 +1110,7 @@ main {
           box-shadow: 4px 24px 24px -12px rgba(var(--app-color-black-rgb), 0.25);
           border: 8px solid #fdfdfd;
         }
-        
+
         &::before {
           content: '';
           position: absolute;
@@ -1123,7 +1124,7 @@ main {
           transform: rotateZ(-2deg);
           z-index: -1;
         }
-        
+
         &::after {
           content: 'Fundadora da BENEDI';
           position: absolute;
@@ -1148,7 +1149,7 @@ main {
         flex-direction: column;
         gap: 16px;
         width: 100%;
-        
+
         .about-info-item {
           padding: 16px 16px 16px 32px;
           border: 2px solid var(--app-color-blue);
@@ -1157,20 +1158,21 @@ main {
           background-color: rgba(var(--app-color-blue-rgb), 0.07);
           box-shadow: 0 24px 24px -12px rgba(var(--app-color-black-rgb), 0.15);
           transition: 0.45s;
-          
+
           p {
             line-height: 1.4;
             color: rgba(var(--app-color-black-rgb), 0.7);
-            
+
             span {
               &:nth-child(2) {
                 font-weight: bolder;
                 border-bottom: 2px solid transparent;
-                border-color: var(--app-color-blue);;
+                border-color: var(--app-color-blue);
+                ;
               }
             }
           }
-          
+
           &::before {
             content: '';
             position: absolute;
@@ -1192,13 +1194,83 @@ main {
             height: 16px;
             z-index: 1;
             transform: translate(4px, 4px);
-            background-image: url("../images/emogis/comment.png");
+            background-image: url("../images/emojis/comment.png");
             background-repeat: no-repeat;
             background-size: contain;
           }
-          
+
           &:hover {
             box-shadow: 0 24px 24px -12px rgba(var(--app-color-black-rgb), 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  .formation {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    
+    .formation-container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      background-color: rgba(var(--app-color-blue-rgb), 0.1);
+      padding: 32px 24px;
+      border-radius: 16px;
+      border: 8px solid #fdfdfd;
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+      
+
+      .formation-intro {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+          padding: 2px;
+          width: 44px;
+          height: 44px;
+        }
+
+        h2 {
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          position: relative;
+          min-height: 38px;
+
+          p {
+            padding-left: 40px;
+          }
+
+
+          &::before {
+            content: '';
+            top: 25%;
+            left: 6px;
+            padding: 4px;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            color: var(--app-color-white);
+            border-radius: 50%;
+            background: url('../images/emojis/check.png') no-repeat;
+            background-size: 60%;
+            background-position: center;
+            background-color: var(--app-color-blue);
           }
         }
       }
@@ -1274,8 +1346,7 @@ main {
 
 
 @media screen and (min-width: 500px) {
-  main {
-  }
+  main {}
 }
 
 @media screen and (min-width: 768px) {
@@ -1364,7 +1435,7 @@ main {
         max-width: 700px;
 
         h2 {
-        .highlight::before {
+          .highlight::before {
             content: '';
             bottom: 25%;
             left: -4px;
@@ -1406,6 +1477,7 @@ main {
 
     .price {
       gap: 56px;
+
       .price-intro {
         h1 {
           transform: scale(0.8);
@@ -1477,6 +1549,7 @@ main {
     .welcome {
       .welcome-text {
         max-width: 900px;
+
         h1 {
           font-size: 48px;
         }
@@ -1557,6 +1630,27 @@ main {
         }
       }
     }
+
+    .formation {
+      .formation-container {
+        padding: 48px;
+        max-width: 1024px;
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(300px, 1fr));
+          gap: 16px;
+
+          li {
+            p {
+              padding-left: 40px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+        
   }
 }
 
