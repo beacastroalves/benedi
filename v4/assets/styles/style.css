@@ -1050,7 +1050,7 @@ main {
 .price-card ul li {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 4px;
   padding: 12px 0;
   color: var(--app-black-70);
   font-size: clamp(14px, 2.5vw, 18px);
@@ -1059,8 +1059,7 @@ main {
 .price-card ul li span::before {
   content: '✓';
   display: inline-block;
-  padding: 4px 8px;
-  border-radius: 50%;
+  padding: 0 8px 4px;
   color: var(--app-color-yellow);
   text-shadow: 1px 1px 1px var(--app-black-20);
   font-weight: bold;
