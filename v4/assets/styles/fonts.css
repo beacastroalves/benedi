@@ -1,0 +1,103 @@
+/* ==========================================================================
+   GILMER - FAMÍLIA PRINCIPAL (Mesmo nome, pesos diferentes)
+   ========================================================================== */
+
+/* Gilmer Light */
+@font-face {
+  font-family: 'Gilmer';
+  src: url('../fonts/Gilmer-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gilmer Regular */
+@font-face {
+  font-family: 'Gilmer';
+  src: url('../fonts/Gilmer-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gilmer Medium */
+@font-face {
+  font-family: 'Gilmer';
+  src: url('../fonts/Gilmer-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gilmer Bold */
+@font-face {
+  font-family: 'Gilmer';
+  src: url('../fonts/Gilmer-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gilmer Heavy */
+@font-face {
+  font-family: 'Gilmer';
+  src: url('../fonts/Gilmer-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   ALTERNATE GOTHIC - LARGURAS (Nomes separados por largura)
+   ========================================================================== */
+
+/* Alternate Gothic No1 (Condensed) */
+@font-face {
+  font-family: 'AlternateGotNo1';
+  src: url('../fonts/AlternateGotNo1D.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Alternate Gothic No2 (Medium Width) */
+@font-face {
+  font-family: 'AlternateGotNo2';
+  src: url('../fonts/AlternateGotNo2D.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Alternate Gothic No3 (Wide) */
+@font-face {
+  font-family: 'AlternateGotNo3';
+  src: url('../fonts/AlternateGotNo3D.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   BIG CASLON - SERIFADA
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Big Caslon';
+  src: url('../fonts/Big-Caslon-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   GILMER OUTLINE (Estilo Decorativo)
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Gilmer Outline';
+  src: url('../fonts/Gilmer-Outline.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

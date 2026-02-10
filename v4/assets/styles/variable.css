@@ -2,30 +2,31 @@
 
 :root {
   /* === SISTEMA TIPOGRÁFICO === */
-  
+
   /* Fontes Primárias */
-  --font-primary: 'Big-Caslon', Georgia, 'Times New Roman', serif;
+  --font-primary: 'Gilmer', sans-serif;
   --font-display: 'AlternateGotNo2', 'Gilmer', sans-serif;
   --font-accent: 'AlternateGotNo3', 'Gilmer', sans-serif;
-  
+  --font-serif: 'Big Caslon', Georgia, serif;
+
   /* Alternate Gothic - Variações de largura */
   --font-alt-condensed: 'AlternateGotNo1', 'Gilmer', sans-serif;
   --font-alt-medium: 'AlternateGotNo2', 'Gilmer', sans-serif;
   --font-alt-wide: 'AlternateGotNo3', 'Gilmer', sans-serif;
-  
+
   /* Pesos da Gilmer */
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-heavy: 900;
-  
+
   /* Letter Spacing */
   --tracking-tight: -0.02em;
   --tracking-normal: 0;
   --tracking-wide: 0.05em;
   --tracking-wider: 0.08em;
-  
+
   /* Line Height */
   --leading-tight: 1.2;
   --leading-normal: 1.5;
@@ -47,10 +48,10 @@
   --app-color-blue-rgb: 65, 123, 239;
   --app-color-blue-shade: #386cd4;
   --app-color-blue-contrast: #fffef0;
-  
-    --app-color-white: #fffef0;
-    --app-color-white-rgb: 255, 254, 240;
-    --app-color-white-contrast: #13060a;
+
+  --app-color-white: #fffef0;
+  --app-color-white-rgb: 255, 254, 240;
+  --app-color-white-contrast: #13060a;
 
   --app-color-black: #13060a;
   --app-color-black-rgb: 19, 6, 10;

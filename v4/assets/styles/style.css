@@ -25,21 +25,20 @@ body {
       rgba(var(--app-color-blue-rgb), 1) 0%,
       rgba(var(--app-color-white-rgb), 1) 5%,
       rgba(var(--app-color-white-rgb), 1) 98%,
-      var(--app-black-100) 100%);
-  /* background-color: var(--app-color-blue); */
+      rgba(var(--app-color-black-rgb), 1) 100%);
   width: 100%;
   min-height: 100vh;
   color: var(--app-color-black);
   overflow-x: hidden;
-
   font-family: var(--font-primary);
   font-weight: var(--font-weight-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* ============================================
-   TIPOGRAFIA
+   TIPOGRAFIA BASE
    ============================================ */
 
 h1,
@@ -48,30 +47,30 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
-  letter-spacing: -0.02em;
-  /* Tracking mais apertado para Alternate Gothic */
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: var(--font-weight-heavy);
   font-family: var(--font-display);
-  font-size: clamp(40px, 6vw, 64px);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: -0.02em;
+  font-weight: normal;
+
 }
 
 h2 {
-  font-family: var(--font-primary);
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: var(--font-weight-medium);
 }
 
 h3 {
-  font-family: var(--font-primary);
-  font-size: clamp(24px, 3vw, 28px);
+  font-size: clamp(24px, 3vw, 24px);
+  font-weight: var(--font-weight-bold);
 }
 
-/* Corpo de texto */
 p,
 li,
 span {
@@ -86,18 +85,6 @@ span {
   line-height: 1.6;
   font-size: clamp(16px, 2vw, 20px);
   letter-spacing: 0.01em;
-}
-
-/* Destaques especiais */
-.highlight {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-bold);
-}
-
-.highlight-primary {
-  font-family: var(--font-primary);
-  font-weight: 500;
-  font-style: italic;
 }
 
 /* ============================================
@@ -128,13 +115,21 @@ span {
   color: var(--app-color-yellow);
 }
 
+.highlight {
+  font-weight: var(--font-weight-bold);
+}
+
 /* ============================================
-   BOTÕES
+   BOTÕES - CTA COM ALTERNATE GOTHIC NO3
    ============================================ */
 
 .btn {
   display: inline-block;
-  font-weight: 600;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-heavy);
+  /* font-weight: normal; */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   text-decoration: none;
   text-align: center;
   padding: 16px 32px;
@@ -143,6 +138,9 @@ span {
   cursor: pointer;
   transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.25s ease, color 0.25s ease;
   will-change: transform;
+  font-size: clamp(13px, 2vw, 16px);
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .btn:hover {
@@ -174,6 +172,16 @@ span {
   color: var(--app-color-yellow-contrast);
 }
 
+.btn-primary-y-p {
+  background-color: var(--app-color-yellow);
+  color: var(--app-color-yellow-contrast);
+}
+
+.btn-primary-y-p:hover {
+  background-color: var(--app-color-pink);
+  color: var(--app-color-pink-contrast);
+}
+
 .btn-primary-y {
   background-color: var(--app-color-yellow);
   color: var(--app-color-yellow-contrast);
@@ -187,22 +195,6 @@ span {
 .btn-primary-p {
   background-color: var(--app-color-pink);
   color: var(--app-color-pink-contrast);
-}
-
-.btn {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-heavy);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: clamp(14px, 2vw, 18px);
-}
-
-/* Alternativa mais suave */
-.btn-alt {
-  font-family: var(--font-accent);
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .pulse:hover {
@@ -285,20 +277,14 @@ main {
 }
 
 .intro-text h1 {
-  font-weight: normal;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -0.02em;
-  font-size: clamp(32px, 6vw, 64px);
+  font-size: clamp(32px, 5.5vw, 64px);
   text-transform: uppercase;
+  font-weight: var(--font-weight-heavy);
 }
 
 .intro-text h1 span.highlight {
   font-family: var(--font-display);
   position: relative;
-  font-weight: var(--font-weight-heavy);
-  text-transform: none;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
 }
 
 .intro-text h1 span.highlight::before {
@@ -307,10 +293,10 @@ main {
   bottom: 12%;
   left: -4px;
   width: 100%;
-  height: 6px;
+  height: 10px;
   padding: 0 4px;
   background-color: rgba(var(--app-color-yellow-rgb), 0.7);
-  border-radius: 50%;
+  border-radius: 40%;
   z-index: -1;
   pointer-events: none;
 }
@@ -318,7 +304,6 @@ main {
 .intro-text .description {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-medium);
-  letter-spacing: 0.02em;
 }
 
 .separador-intro {
@@ -359,8 +344,8 @@ main {
 }
 
 .welcome-text h1 {
-  font-family: var(--font-display);
   font-weight: normal;
+  /* text-transform: uppercase; */
 }
 
 .welcome-cards {
@@ -392,24 +377,14 @@ main {
   margin: 8px 0;
 }
 
-.welcome-card h3 {
-  letter-spacing: 0;
-}
-
-.welcome-card p {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-regular);
-  line-height: 1.5;
-}
-
 .welcome-card p:last-child {
-  color: var(--app-black-60);
+  color: var(--app-black-70);
   line-height: 1.4;
 }
 
 .welcome-card:hover {
   border-color: var(--app-color-blue);
-  box-shadow: 4px 8px 12px rgba(var(--app-color-black-rgb), 0.05);
+  box-shadow: 4px 8px 12px var(--app-black-10);
 }
 
 .welcome-card:hover img {
@@ -417,7 +392,7 @@ main {
 }
 
 /* ============================================
-   SEÇÃO IMPACT
+   SEÇÃO IMPACT - BIG CASLON COMPLETA
    ============================================ */
 
 .impact {
@@ -439,31 +414,34 @@ main {
   filter: blur(9px);
   background: linear-gradient(135deg,
       rgba(var(--app-color-pink-rgb), 0.5) 0%,
-      rgba(var(--app-color-black-rgb), 0) 40%,
-      rgba(var(--app-color-black-rgb), 0) 60%,
+      rgba(var(--app-color-pink-rgb), 0) 40%,
+      rgba(var(--app-color-pink-rgb), 0) 60%,
       rgba(var(--app-color-yellow-rgb), 0.5) 100%);
   pointer-events: none;
 }
 
 .impact-line {
   position: relative;
-  padding: 48px 24px;
+  padding: 48px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .impact-line h1 {
-  font-family: var(--font-primary);
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
   text-align: center;
+  font-size: clamp(32px, 6vw, 68px);
   color: var(--app-color-white);
-  font-weight: var(--font-weight-medium);
   line-height: 1.3;
-  font-size: clamp(40px, 6vw, 64px);
+  letter-spacing: 0;
 }
 
-.impact-line h1 span.highlight-y,
-.impact-line h1 span.highlight-p {
-  font-weight: var(--font-weight-heavy);
+.impact-line h1 .highlight-y,
+.impact-line h1 .highlight-p {
+  font-family: var(--font-serif);
+  font-style: italic;
 }
 
 .impact-line::after,
@@ -473,7 +451,7 @@ main {
   width: 64px;
   height: 5px;
   background-color: var(--app-color-pink);
-  border: 1px solid white;
+  border: 1px solid var(--app-color-white);
   z-index: 3;
   left: calc(50% - 32px);
   border-radius: 16px;
@@ -513,7 +491,9 @@ main {
 }
 
 .change-text h1 {
-  font-weight: var(--font-weight-regular);
+  font-family: var(--font-display);
+  font-weight: normal;
+  /* text-transform: uppercase; */
 }
 
 .change-cards {
@@ -549,12 +529,7 @@ main {
   object-fit: contain;
   height: 100%;
   max-width: 100%;
-  /* animation: live-l 6s linear infinite; */
 }
-
-/* .change-card:nth-child(even) .change-wrap img {
-  animation-name: live-r;
-} */
 
 .change-card-info {
   display: flex;
@@ -572,15 +547,11 @@ main {
   gap: 16px;
 }
 
-.change-card-title h3 {
-  letter-spacing: -0.02em;
-}
-
 .change-card-title .circle {
   display: none;
-  min-width: 30px;
-  width: 30px;
-  height: 30px;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
   background-color: var(--app-color-blue);
   border-radius: 50%;
   flex-shrink: 0;
@@ -588,8 +559,8 @@ main {
 
 .change-card-description {
   font-size: 18px;
+  line-height: 1.4;
   color: var(--app-black-70);
-  line-height: 1.5;
 }
 
 /* ============================================
@@ -616,7 +587,9 @@ main {
 }
 
 .find-text h1 {
-  font-weight: var(--font-weight-regular);
+  font-family: var(--font-display);
+  font-weight: normal;
+  /* text-transform: uppercase; */
 }
 
 .find-cards {
@@ -635,7 +608,7 @@ main {
   background-color: var(--app-color-white);
   padding: 24px;
   border-radius: 16px;
-  box-shadow: 2px 2px 8px rgba(var(--app-color-black-rgb), 0.05);
+  box-shadow: 2px 2px 8px var(--app-black-10);
   width: 100%;
   transition: all 0.45s ease;
 }
@@ -681,7 +654,7 @@ main {
 
 .find-card:hover {
   transform: scale(1.04);
-  box-shadow: 0 24px 50px -12px rgba(var(--app-color-black-rgb), 0.10);
+  box-shadow: 0 24px 50px -12px var(--app-black-10);
 }
 
 .find-card:hover .find-card-icon {
@@ -696,7 +669,7 @@ main {
 }
 
 /* ============================================
-   SEÇÃO NOT ALONE
+   SEÇÃO NOT ALONE - BIG CASLON COMPLETA
    ============================================ */
 
 .not-alone {
@@ -716,15 +689,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
   text-align: center;
-  padding: 48px 32px;
+  padding: 48px 24px;
   line-height: 1.4;
   background-color: rgba(var(--app-color-white-rgb), 0.7);
-  text-shadow: 1px 1px 20px var(--app-black-30);
-  box-shadow: 0 0 50px -24px var(--app-black-30);
+  text-shadow: 1px 1px 20px var(--app-black-50);
+  box-shadow: 0 0 50px -24px var(--app-black-70);
   border-radius: 16px;
 }
 
@@ -738,7 +710,7 @@ main {
   background: linear-gradient(135deg,
       rgba(var(--app-color-yellow-rgb), 1) 0%,
       rgba(var(--app-color-pink-rgb), 1) 100%);
-  box-shadow: 0 24px 25px -12px var(--app-black-30);
+  box-shadow: 0 24px 25px -12px var(--app-black-20);
   transform: rotateZ(5deg);
 }
 
@@ -751,26 +723,20 @@ main {
 }
 
 .not-alone-container h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
   color: var(--app-color-black);
-  font-weight: 500;
-}
-
-.not-alone-container h2:nth-child(2) {
-  font-weight: 500;
-  padding-top: 40px;
-  max-width: 900px;
-}
-
-.not-alone-container h2:nth-child(3) {
-  padding-bottom: 40px;
-  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: 48px;
 }
 
 .not-alone-container .highlight {
-  font-family: var(--font-primary);
-  position: relative;
+  text-shadow: 1px 1px 20px var(--app-black-10);
+  font-family: var(--font-serif);
+  font-weight: 700;
   font-style: italic;
-  font-weight: 900;
+  position: relative;
   z-index: 2;
 }
 
@@ -789,7 +755,7 @@ main {
 
 .not-alone-container a {
   font-size: clamp(14px, 2vw, 16px);
-  margin-top: 8px;
+  margin-top: 48px;
 }
 
 /* ============================================
@@ -865,9 +831,8 @@ main {
 }
 
 .active-content h2 {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  font-size: clamp(28px, 4vw, 48px);
 }
 
 .active-content p.description {
@@ -876,7 +841,7 @@ main {
 }
 
 .active-content p.description span {
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
 }
 
 .active-card {
@@ -896,9 +861,9 @@ main {
 }
 
 .active-card p span {
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 var(--app-black-30);
+  text-shadow: 1px 1px 0 var(--app-black-40);
 }
 
 .active-card p span.highlight-p {
@@ -908,6 +873,7 @@ main {
 .active-items {
   display: grid;
   grid-template-columns: repeat(2, 88px);
+  font-weight: var(--font-weight-medium);
   gap: 16px;
   margin: 16px auto 0;
   max-width: fit-content;
@@ -938,7 +904,7 @@ main {
 .active-title {
   width: fit-content;
   margin: 0 auto;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(12px, 2vw, 14px);
 }
 
@@ -963,6 +929,7 @@ main {
   min-height: 100vh;
   text-align: center;
   background: rgba(var(--app-color-yellow-rgb), 0.1);
+  color: var(--app-color-black);
 }
 
 .price-intro .description {
@@ -1038,11 +1005,10 @@ main {
   width: 100%;
 }
 
-.price-card-title h3 {
+.price-card-title h2 {
   font-family: var(--font-accent);
-  font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1125em;
   font-size: clamp(36px, 3vw, 40px);
   font-weight: var(--font-weight-bold);
 }
@@ -1055,8 +1021,7 @@ main {
 }
 
 .price-line span {
-  font-family: var(--font-accent);
-  font-size: clamp(40px, 8vw, 56px);
+  font-size: clamp(36px, 8vw, 48px);
   color: var(--app-color-blue);
   font-weight: bold;
   text-shadow: 2px 2px 1px var(--app-black-20);
@@ -1071,8 +1036,8 @@ main {
 .price-line p {
   font-family: var(--font-display);
   font-size: clamp(30px, 5vw, 36px);
-  font-weight: bold;
   color: var(--app-color-black);
+  font-weight: var(--font-weight-bold);
 }
 
 .price-card ul {
@@ -1093,10 +1058,11 @@ main {
 
 .price-card ul li span::before {
   content: '✓';
-  padding: 4px;
+  display: inline-block;
+  padding: 4px 8px;
   border-radius: 50%;
   color: var(--app-color-yellow);
-  text-shadow: 2px 1px 1px var(--app-black-30);
+  text-shadow: 1px 1px 1px var(--app-black-20);
   font-weight: bold;
 }
 
@@ -1137,7 +1103,7 @@ main {
   position: relative;
   background: linear-gradient(-45deg,
       rgba(var(--app-color-pink-rgb), 0.4) 0%,
-      rgba(var(--app-color-black-rgb), 0) 50%,
+      rgba(var(--app-color-pink-rgb), 0) 50%,
       rgba(var(--app-color-yellow-rgb), 0.4) 100%);
   overflow: hidden;
 }
@@ -1165,31 +1131,39 @@ main {
   z-index: 1;
 }
 
-.mockup-container h1 {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-bold);
-  font-size: clamp(32px, 6vw, 48px);
-  max-width: 900px;
+.mockup-container .mockup-text h1 {
+  max-width: 1024px;
+  text-transform: uppercase;
   margin: 0 auto;
 }
 
-.mockup-container h1 span.highlight {
-  text-shadow: 1px 1px 2px var(--app-black-30);
+.mockup-container .mockup-text h1 span.highlight {
   position: relative;
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px var(--app-black-50);
 }
 
-.mockup-container h1 span.highlight::before {
+.mockup-container .mockup-text h1 span.highlight::before {
   content: '';
   position: absolute;
-  bottom: 12%;
+  bottom: 20%;
   left: -4px;
   width: 100%;
-  height: 6px;
+  height: 24px;
   padding: 0 4px;
-  background-color: var(--app-black-20);
-  border-radius: 50%;
+  background-color: rgba(var(--app-color-yellow-rgb), 1);
+  border-radius: 40%;
   z-index: -1;
   pointer-events: none;
+  pointer-events: none;
+}
+
+
+.mockup-container .mockup-text p {
+  max-width: 800px;
+  margin: 8px auto;
 }
 
 .mockup-imgs {
@@ -1304,16 +1278,15 @@ main {
   background-color: var(--app-color-white);
   padding: 12px 24px;
   border-radius: 40px;
-  font-weight: 500;
-  box-shadow: 2px 4px 8px -2px var(--app-black-20);
+  font-weight: var(--font-weight-medium);
+  box-shadow: 2px 4px 8px -2px  var(--app-black-20);
   width: 100%;
   transition: transform 0.3s ease;
-  font-weight: var(--font-weight-bold);
 }
 
 .mockup-itens .item:hover {
   transform: translateY(-2px);
-  box-shadow: 2px 6px 12px -2px var(--app-black-20);
+  box-shadow: 2px 6px 12px -2px  var(--app-black-20);
 }
 
 .mockup-itens .item div {
@@ -1357,6 +1330,9 @@ main {
 }
 
 .about-intro h1 {
+  font-family: var(--font-display);
+  font-weight: normal;
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
@@ -1382,6 +1358,7 @@ main {
   max-width: 500px;
   position: relative;
   padding: 24px;
+  pointer-events: none;
 }
 
 .about-img img {
@@ -1423,7 +1400,7 @@ main {
   font-size: 14px;
   background-color: var(--app-color-yellow);
   transform: rotateZ(-5deg);
-  box-shadow: 0 24px 20px -10px var(--app-black-40);
+  box-shadow: 0 24px 20px -10px  var(--app-black-40);
   z-index: 3;
   pointer-events: none;
 }
@@ -1437,12 +1414,12 @@ main {
 }
 
 .about-info-item {
-  padding: 20px 20px 20px 32px;
+  padding: 24px 24px 24px 28px;
   border: 2px solid var(--app-color-blue);
   border-radius: 16px;
   position: relative;
   background-color: rgba(var(--app-color-blue-rgb), 0.07);
-  box-shadow: 0 24px 24px -12px var(--app-black-20);
+  box-shadow: 0 24px 24px -12px  var(--app-black-20);
   transition: box-shadow 0.45s ease, transform 0.3s ease;
 }
 
@@ -1454,23 +1431,28 @@ main {
 .about-info-item p {
   line-height: 1.5;
   color: var(--app-black-70);
-  text-indent: 36px;
+  margin-bottom: 12px;
   text-align: justify;
+  text-indent: 36px;
+}
+
+
+.about-info-item p:first-of-type {
+  margin-top: 0;
+}
+
+.about-info-item p:last-of-type {
+  margin-bottom: 0;
 }
 
 .about-info-item p span.highlight-b {
   font-weight: bolder;
 }
 
-
-.about-info-item p span.highlight-b:nth-child(2) {
-  font-weight: var(--font-weight-heavy);
-  text-decoration: underline;
-}
-
 .about-info-item p span.highlight {
   font-weight: 900;
-  background-color: rgba(var(--app-color-yellow-rgb), 0.35);
+  font-style: italic;
+  background-color: rgba(var(--app-color-yellow-rgb), 0.5);
 }
 
 .about-info-item::before {
@@ -1508,8 +1490,7 @@ main {
 .certificate {
   display: flex;
   flex-direction: column;
-  padding: 32px 24px;
-  padding-top: 0;
+  padding: 32px 16px;
 }
 
 .certificate-container {
@@ -1537,6 +1518,12 @@ main {
   object-fit: contain;
 }
 
+.certificate-intro h2 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
 .certificate-container ul {
   display: flex;
   flex-direction: column;
@@ -1558,7 +1545,7 @@ main {
 
 .certificate-container ul li:hover {
   transform: translateX(4px);
-  box-shadow: 2px 4px 8px var(--app-black-10);
+  box-shadow: 2px 4px 8px  var(--app-black-10);
 }
 
 .certificate-container ul li img {
@@ -1600,23 +1587,30 @@ main {
   flex-direction: column;
   gap: 16px;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 800px;
 }
 
-.dep-text h1 {
+.dep-text h2 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
   text-shadow: 1px 1px 1px rgba(var(--app-color-blue-rgb), 0.3);
+  font-size: clamp(24px, 4vw, 44px);
 }
 
-.dep-text h1 span {
+.dep-text h2 span {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-heavy);
+  z-index: 2;
+}
+
+.dep-text h2 span:nth-child(1) {
   position: relative;
-  font-family: var(--font-display);
-  z-index: 1;
 }
 
-.dep-text h1 span:nth-child(1)::before {
+.dep-text h2 span:nth-child(1)::before {
   content: '';
   position: absolute;
-  bottom: 15%;
+  bottom: 22%;
   left: -4px;
   width: 100%;
   height: 20px;
@@ -1627,10 +1621,14 @@ main {
   pointer-events: none;
 }
 
-.dep-text h1 span:nth-child(2)::before {
+.dep-text h2 span:nth-child(2) {
+  position: relative;
+}
+
+.dep-text h2 span:nth-child(2)::before {
   content: '';
   position: absolute;
-  bottom: 15%;
+  bottom: 22%;
   left: -4px;
   width: 100%;
   height: 20px;
@@ -1672,7 +1670,7 @@ main {
 }
 
 .dep-card:nth-child(3) {
-  background-color: rgba(var(--app-color-blue-rgb), 0.3);
+  background-color: rgba(var(--app-color-blue-rgb), 1);
 }
 
 .dep-card img {
@@ -1691,7 +1689,7 @@ main {
 
 .dep-card:hover img {
   transform: scale(1.15);
-  box-shadow: 4px 8px 12px var(--app-black-30);
+  box-shadow: 4px 8px 12px  var(--app-black-30);
 }
 
 /* ============================================
@@ -1723,6 +1721,12 @@ main {
   margin-bottom: 24px;
 }
 
+.faq-text h1 {
+  font-family: var(--font-display);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 .faq-container {
   display: flex;
   flex-direction: column;
@@ -1751,11 +1755,11 @@ main {
   background-color: var(--app-color-white);
   padding: 16px 64px 16px 24px;
   border-radius: 8px;
-  box-shadow: 2px 2px 8px 2px var(--app-black-30);
+  box-shadow: 2px 2px 8px 2px var(--app-black-40);
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 500;
-  font-size: clamp(16px, 2.5vw, 18px);
+  font-size: clamp(16px, 2.5vw, 20px);
   text-align: left;
   width: 100%;
   user-select: none;
@@ -1855,10 +1859,10 @@ main {
 }
 
 .benedi-container {
-  padding: 40px 32px;
+  padding: 40px 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   border-radius: 8px;
   background: var(--app-color-white);
   border: 4px solid var(--app-color-blue);
@@ -1869,12 +1873,17 @@ main {
 }
 
 .benedi-container h1 {
+  font-family: var(--font-display);
+  font-weight: normal;
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .benedi-container .description {
   text-align: left;
   line-height: 1.6;
+  text-indent: 40px;
+  text-align: justify;
 }
 
 .benedi-container .highlight {
@@ -2009,10 +2018,10 @@ footer {
 .footer-copy p:nth-child(2) {
   color: rgba(var(--app-color-white-rgb), 0.6);
   padding-bottom: 24px;
+}
 
-  a {
-    color: rgba(var(--app-color-white-rgb), 0.6);
-  }
+.footer-copy p:nth-child(2) a {
+  color: rgba(var(--app-color-white-rgb), 0.6);
 }
 
 /* ============================================
@@ -2031,82 +2040,40 @@ footer {
   }
 }
 
-/* @keyframes live-l {
-
-  0%,
-  100% {
-    transform: rotateZ(0deg) scale(1);
-  }
-
-  25% {
-    transform: rotateZ(10deg) scale(1.015);
-  }
-
-  50% {
-    transform: rotateZ(0deg) scale(1.03);
-  }
-
-  75% {
-    transform: rotateZ(-10deg) scale(1.015);
-  }
-} */
-
-/* @keyframes live-r {
-
-  0%,
-  100% {
-    transform: rotateZ(0deg) scale(1);
-  }
-
-  25% {
-    transform: rotateZ(-10deg) scale(1.015);
-  }
-
-  50% {
-    transform: rotateZ(0deg) scale(1.03);
-  }
-
-  75% {
-    transform: rotateZ(10deg) scale(1.015);
-  }
-} */
-
 /* ============================================
-   MEDIA QUERIES - ORIENTAÇÃO DA TELA LANDSCAPE (768px+)
+   MEDIA QUERIES - ORIENTAÇÃO LANDSCAPE
    ============================================ */
 
 @media screen and (orientation: landscape) and (max-device-width: 932px) {
-  main {
 
-    .intro,
-    .welcome,
-    .impact,
-    .change,
-    .find,
-    .not-alone,
-    .active,
-    .price,
-    .mockup,
-    .about-nat,
-    .certificate,
-    .dep,
-    .faq,
-    .benedi {
-      padding-left: 48px;
-      padding-right: 40px;
-    }
+  main .intro,
+  main .welcome,
+  main .impact,
+  main .change,
+  main .find,
+  main .not-alone,
+  main .active,
+  main .price,
+  main .mockup,
+  main .about-nat,
+  main .certificate,
+  main .dep,
+  main .faq,
+  main .benedi {
+    padding-left: 48px;
+    padding-right: 40px;
+  }
 
-    .dep-card:nth-child(1):hover {
-      transform: scale(1.3) translatex(20%);
-    }
+  main .dep-card:nth-child(1):hover {
+    transform: scale(1.3) translatex(20%);
+  }
 
-    .dep-card:nth-child(2):hover {
-      transform: scale(1.3) translate(0);
-    }
+  main .dep-card:nth-child(2):hover {
+    transform: scale(1.3) translate(0);
+  }
 
-    .dep-card:nth-child(3):hover {
-      transform: scale(1.3) translateX(-20%);
-    }
+  main .dep-card:nth-child(3):hover {
+    transform: scale(1.3) translateX(-20%);
   }
 }
 
@@ -2115,7 +2082,6 @@ footer {
    ============================================ */
 
 @media screen and (min-width: 768px) {
-
   .intro {
     padding: 120px 24px 24px;
   }
@@ -2304,7 +2270,6 @@ footer {
    ============================================ */
 
 @media screen and (min-width: 1024px) {
-
   .welcome-text {
     max-width: 900px;
   }
@@ -2333,7 +2298,7 @@ footer {
 
   .not-alone-container {
     max-width: 1200px;
-    padding: 56px 64px;
+    padding: 64px;
   }
 
   .active-content {
@@ -2343,6 +2308,7 @@ footer {
   .about-cards-wrap {
     flex-direction: row;
     gap: 48px;
+    align-items: flex-start;
   }
 
   .about-img {
@@ -2351,10 +2317,6 @@ footer {
 
   .about-info-items {
     max-width: 500px;
-  }
-
-  .about-info-item p {
-    line-height: 1.7;
   }
 
   .dep-cards {
@@ -2378,13 +2340,14 @@ footer {
     transform: scale(1.4) translateX(-25%);
   }
 
-  .accordion .trigger {
-    font-size: 20px;
-  }
-
   .accordion-content p {
     font-size: 18px;
     padding: 32px;
+  }
+
+  .benedi-container {
+    padding: 42px;
+    padding-right: 48px;
   }
 }
 
@@ -2407,14 +2370,13 @@ footer {
 *:focus-visible {
   outline: 2px solid var(--app-color-blue);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 40px;
 }
 
 *:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Scroll suave apenas quando não há preferência por movimento reduzido */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
