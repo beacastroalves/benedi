@@ -143,16 +143,12 @@
    CUSTOM CURSOR (Desktop only)
    ============================================ */
 
-@media (min-device-width: 1024px)  {
+/*@media (min-device-width: 1024px)  {
   body.is-desktop {
     cursor: none;
   }
 
-  .btn {
-    cursor: none;
-  }
-
-  .custom-cursor {
+   .custom-cursor {
     position: fixed;
     width: 20px;
     height: 20px;
@@ -169,8 +165,8 @@
     height: 40px;
     background-color: rgba(var(--app-color-blue-rgb), 0.5);
     border-color: var(--app-color-yellow);
-  }
-}
+  } 
+}*/
 
 /* ============================================
    LAZY LOADING IMAGES
@@ -293,8 +289,7 @@ img.lazy-loaded {
   }
   
   .reading-progress,
-  .back-to-top,
-  .custom-cursor {
+  .back-to-top {
     display: none !important;
   }
   

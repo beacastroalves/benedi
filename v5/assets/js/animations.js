@@ -250,7 +250,7 @@ function initLazyImages() {
 
 /**
  * Cursor customizado que segue o mouse
- */
+
 function initCustomCursor() {
   if (prefersReducedMotion() || window.innerWidth < 1024) return;
   
@@ -287,7 +287,7 @@ function initCustomCursor() {
     el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
   });
 }
-
+ */
 // ============================================
 // PROGRESS BAR DE LEITURA
 // ============================================
