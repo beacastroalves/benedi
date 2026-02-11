@@ -174,7 +174,7 @@
 
 img[data-src] {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 
 img.lazy-loaded {
@@ -186,8 +186,6 @@ img.lazy-loaded {
    ============================================ */
 
 /* Cards com glow ao hover */
-.welcome-card:hover,
-.find-card:hover,
 .dep-card:hover {
   box-shadow:
     0 10px 40px rgba(var(--app-color-blue-rgb), 0.15),

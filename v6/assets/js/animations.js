@@ -172,8 +172,8 @@ function addStaggeredDelays() {
     accordion.setAttribute('data-scroll-delay', index * 50);
   });
   
-  // Seções inteiras
-  document.querySelectorAll('.intro-text, .welcome-text, .change-text, .find-text, .not-alone-container, .active-content, .price-intro, .mockup-text, .about-intro, .dep-text, .faq-text, .benedi-container').forEach(section => {
+  // Seções inteiras - retirada .benedi-container
+  document.querySelectorAll('.intro-text, .welcome-text, .change-text, .find-text, .not-alone-container, .active-content, .price-intro, .mockup-text, .about-intro, .dep-text, .faq-text').forEach(section => {
     section.setAttribute('data-scroll-animation', 'fade-up');
   });
   
@@ -244,50 +244,6 @@ function initLazyImages() {
   images.forEach(img => imageObserver.observe(img));
 }
 
-// ============================================
-// CURSOR CUSTOMIZADO (OPCIONAL)
-// ============================================
-
-/**
- * Cursor customizado que segue o mouse
-
-function initCustomCursor() {
-  if (prefersReducedMotion() || window.innerWidth < 1024) return;
-  
-  const cursor = document.createElement('div');
-  cursor.className = 'custom-cursor';
-  document.body.appendChild(cursor);
-  
-  let mouseX = 0, mouseY = 0;
-  let cursorX = 0, cursorY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-  
-  function animateCursor() {
-    const dx = mouseX - cursorX;
-    const dy = mouseY - cursorY;
-    
-    cursorX += dx * 0.3;
-    cursorY += dy * 0.3;
-    
-    cursor.style.left = cursorX + 'px';
-    cursor.style.top = cursorY + 'px';
-    
-    requestAnimationFrame(animateCursor);
-  }
-  
-  animateCursor();
-  
-  // Aumenta cursor em elementos clicáveis
-  document.querySelectorAll('a, button, .btn').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-  });
-}
- */
 // ============================================
 // PROGRESS BAR DE LEITURA
 // ============================================
