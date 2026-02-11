@@ -1688,30 +1688,67 @@ main {
 
 .dep-card:nth-child(2) {
   background-color: rgba(var(--app-color-yellow-rgb), 1);
+
+  .dep-item .dep-person img {
+    border: 4px solid var(--app-color-yellow);
+  }
 }
 
 .dep-card:nth-child(3) {
   background-color: rgba(var(--app-color-blue-rgb), 1);
-}
 
-.dep-card img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.75s ease;
-  padding: 16px;
-  background-color: white;
-  border-radius: 16px;
-  object-fit: contain;
+  .dep-item .dep-person img {
+    border: 4px solid var(--app-color-blue);
+  }
 }
 
 .dep-card:hover {
   box-shadow: 4px 50px -10px var(--app-black-50);
 }
 
-.dep-card:hover img {
-  transform: scale(1.15);
-  box-shadow: 4px 8px 12px var(--app-black-30);
+.dep-card:hover {
+  .dep-item {
+    transform: scale(1.2);
+    box-shadow: 4px 8px 12px var(--app-black-30);
+  }
 }
+
+.dep-card .dep-item {
+  width: 100%;
+  height: 100%;
+  min-width: none;
+  transition: transform 0.75s ease;
+  padding: 16px;
+  background-color: var(--app-color-white);
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.dep-item .dep-person-text {
+  font-size: clamp(13px, 2vw, 14px);
+  line-height: 1.3;
+  margin-top: 16px;
+}
+
+.dep-item .dep-person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dep-item .dep-person img {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  border: 4px solid var(--app-color-pink);
+}
+
+.dep-item .dep-person .dep-name p {
+  margin-top: 4px;
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+
 
 /* ============================================
    SEPARADOR FAQ
@@ -2233,6 +2270,7 @@ footer {
   }
 
   .dep-card {
+    min-width: 300px;
     max-width: 350px;
   }
 
@@ -2354,15 +2392,15 @@ footer {
   }
 
   .dep-card:nth-child(1):hover {
-    transform: scale(1.4) translateX(25%);
+    transform: scale(1.5) translateX(25%);
   }
 
   .dep-card:nth-child(2):hover {
-    transform: scale(1.4) translate(0);
+    transform: scale(1.5) translate(0);
   }
 
   .dep-card:nth-child(3):hover {
-    transform: scale(1.4) translateX(-25%);
+    transform: scale(1.5) translateX(-25%);
   }
 
   .accordion-content p {
