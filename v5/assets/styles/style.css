@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-primary);
-  
+
 }
 
 html {
@@ -1293,14 +1293,14 @@ main {
   background-color: var(--app-color-white);
   padding: 12px 24px;
   border-radius: 40px;
-  box-shadow: 2px 4px 8px -2px  var(--app-black-20);
+  box-shadow: 2px 4px 8px -2px var(--app-black-20);
   width: 100%;
   transition: transform 0.3s ease;
 }
 
 .mockup-itens .mockup-item:hover {
   transform: translateY(-2px);
-  box-shadow: 2px 6px 12px -2px  var(--app-black-20);
+  box-shadow: 2px 6px 12px -2px var(--app-black-20);
 }
 
 .mockup-itens .mockup-item div {
@@ -1419,7 +1419,7 @@ main {
   font-size: 14px;
   background-color: var(--app-color-yellow);
   transform: rotateZ(-5deg);
-  box-shadow: 0 24px 20px -10px  var(--app-black-40);
+  box-shadow: 0 24px 20px -10px var(--app-black-40);
   z-index: 3;
   pointer-events: none;
 }
@@ -1438,7 +1438,7 @@ main {
   border-radius: 16px;
   position: relative;
   background-color: rgba(var(--app-color-blue-rgb), 0.07);
-  box-shadow: 0 24px 24px -12px  var(--app-black-20);
+  box-shadow: 0 24px 24px -12px var(--app-black-20);
   transition: box-shadow 0.45s ease, transform 0.3s ease;
 }
 
@@ -1564,7 +1564,7 @@ main {
 
 .certificate-container ul li:hover {
   transform: translateX(4px);
-  box-shadow: 2px 4px 8px  var(--app-black-10);
+  box-shadow: 2px 4px 8px var(--app-black-10);
 }
 
 .certificate-container ul li img {
@@ -1600,6 +1600,7 @@ main {
       rgba(var(--app-color-white-rgb), 0.1) 0%,
       rgba(var(--app-color-blue-rgb), 0.3) 50%);
 }
+
 
 .dep-text {
   display: flex;
@@ -1668,6 +1669,7 @@ main {
   width: 100%;
 }
 
+
 .dep-card {
   display: flex;
   flex-direction: column;
@@ -1708,7 +1710,7 @@ main {
 
 .dep-card:hover img {
   transform: scale(1.15);
-  box-shadow: 4px 8px 12px  var(--app-black-30);
+  box-shadow: 4px 8px 12px var(--app-black-30);
 }
 
 /* ============================================
@@ -2218,6 +2220,10 @@ footer {
 
   .mockup-itens .mockup-item {
     width: fit-content;
+  }
+
+  .dep a {
+    margin-top: 32px;
   }
 
   .dep-cards {
