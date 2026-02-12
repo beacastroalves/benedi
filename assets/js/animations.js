@@ -416,9 +416,7 @@ function init() {
   initLazyImages();
   
   // Recursos opcionais (descomente se quiser usar)
-  initCustomCursor();
   initKonamiCode();
-  
   console.log('✅ Animações carregadas com sucesso!');
 }
 
