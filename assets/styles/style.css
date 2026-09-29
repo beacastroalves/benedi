@@ -295,12 +295,11 @@ main {
 .intro-text h1 span.highlight {
   font-family: var(--font-display);
   position: relative;
-  color: var(--app-color-yellow);
-  background-color: var(--app-color-black);
-  padding: 4px 12px;
-  border-radius: 10px;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  color: var(--app-color-yellow-contrast);
+  text-decoration: underline;
+  text-decoration-color: var(--app-color-black);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
 }
 
 .intro-text .description {
