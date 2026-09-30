@@ -1608,12 +1608,12 @@ main {
 .certificate-container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  background-color: rgba(var(--app-color-blue-rgb), 0.1);
+  gap: 40px;
+  background-color: var(--app-color-white);
   padding: 32px 24px;
   border-radius: 16px;
   border: 8px solid #fdfdfd;
-  max-width: 1024px;
+  max-width: 760px;
   width: 100%;
   margin: 0 auto;
 }
@@ -1637,42 +1637,88 @@ main {
 }
 
 .certificate-container ul {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 12px;
   list-style: none;
+  padding-left: 56px;
+}
+
+.certificate-container ul::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 17px;
+  width: 2px;
+  background: linear-gradient(180deg,
+      var(--app-color-blue) 0%,
+      var(--app-color-pink) 33%,
+      var(--app-color-yellow) 66%,
+      var(--app-color-blue) 100%);
 }
 
 .certificate-container ul li {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 16px;
-  border: 1px solid var(--app-color-blue);
-  padding: 16px;
-  border-radius: 8px;
-  width: 100%;
-  min-height: 70px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 64px;
+  padding: 10px 0;
 }
 
-.certificate-container ul li:hover {
-  transform: translateX(4px);
-  box-shadow: 2px 4px 8px var(--app-black-10);
-}
-
-.certificate-container ul li img {
-  width: 20px;
-  height: 20px;
-  background-color: var(--app-color-blue);
-  padding: 4px;
+.certificate-container ul li .cert-icon {
+  position: absolute;
+  left: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   flex-shrink: 0;
+  box-shadow: 0 0 0 6px var(--app-color-white);
+  transition: transform 0.3s ease;
+}
+
+.certificate-container ul li .cert-icon::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  -webkit-mask: url("../images/emojis/check.png") center / contain no-repeat;
+  mask: url("../images/emojis/check.png") center / contain no-repeat;
+}
+
+.certificate-container ul li:nth-child(3n+1) .cert-icon {
+  background-color: var(--app-color-blue);
+}
+
+.certificate-container ul li:nth-child(3n+1) .cert-icon::before {
+  background-color: var(--app-color-blue-contrast);
+}
+
+.certificate-container ul li:nth-child(3n+2) .cert-icon {
+  background-color: var(--app-color-pink);
+}
+
+.certificate-container ul li:nth-child(3n+2) .cert-icon::before {
+  background-color: var(--app-color-pink-contrast);
+}
+
+.certificate-container ul li:nth-child(3n+3) .cert-icon {
+  background-color: var(--app-color-yellow);
+}
+
+.certificate-container ul li:nth-child(3n+3) .cert-icon::before {
+  background-color: var(--app-color-yellow-contrast);
+}
+
+.certificate-container ul li:hover .cert-icon {
+  transform: translateY(-50%) scale(1.15);
 }
 
 .certificate-container ul li p {
-  line-height: 1.4;
+  line-height: 1.5;
   color: var(--app-black-70);
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(15px, 2.2vw, 18px);
 }
 
 /* ============================================
@@ -2397,12 +2443,6 @@ footer {
     padding: 48px;
   }
 
-  .certificate-container ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 16px;
-  }
-
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
@@ -2480,6 +2520,15 @@ footer {
     height: 20px;
     top: calc(50% - 15px);
     left: -15px;
+  }
+
+  .certificate-container {
+    max-width: 820px;
+    padding: 56px 64px;
+  }
+
+  .certificate-container ul li {
+    min-height: 72px;
   }
 
   .dep-cards {
