@@ -1,0 +1,308 @@
+{  
+  "\_instrucoes": "Este arquivo controla TODOS os textos do site. Edite apenas o conteúdo entre aspas, sem apagar as aspas, vírgulas ou chaves. Tags como \<span class=\\"...\\"\> podem ficar, elas só controlam destaques coloridos no texto.",
+
+  "cabecalho": {  
+    "logoAlt": "logo Benedi circular"  
+  },
+
+  "introducao": {  
+    "titulo": "Viver de clínica começa no raciocínio clínico e cresce em boa companhia.  
+"
+
+    "descricao": "o clube onde você desenvolve raciocínio clínico na prática, com encontros ao vivo, casos reais e uma comunidade de psis que te leva pra cima.",  
+    "botao": "Quero Fazer Parte"  
+"descricao": garantia de 7 dias.  
+  },
+
+  "boasVindas": {  
+    "titulo": "Você é o tipo de psi que…",  
+    "cards": \[  
+           {  
+       "texto": "Estuda por prazer e sente um friozinho bom quando um caso finalmente "fecha" na formulação.  
+"  
+      },  
+ {  
+        "titulo": "Nossa Essência",  
+        "texto": "Leva cada paciente a sério, antes, durante e depois dos 50 minutos."  
+      },
+
+      {  
+        "texto": "Quer ser reconhecida como quem estuda e se prepara para intervir. Não como quem "só conversa".  
+"  
+      }  
+{  
+        "texto": "Acredita que precisa estar em ambientes que te incentivam para só assim chegar mais longe.".  
+"  
+      }  
+{  
+        "texto": "Sonha com uma clínica valorizada e com tempo para viver outras áreas da vida.".  
+"  
+      }  
+{  
+        "texto": "Adoraria ter um lugar seguro para poder compartilhar projetos e desafios da vida profissional".  
+"  
+      }  
+"descricao": “Se você é tudo isso, a Benedi foi feita pra você.    \]  
+  },
+
+  "fraseImpacto": {  
+    "titulo": "Ser estratégica \<span class=\\"highlight-y\\"\>não significa\</span\> abrir mão de ser \<span class=\\"highlight-p\\"\>empática\</span\>"  
+  },
+
+  "mudancas": {  
+    "titulo": "O que muda quando você entra para a BENEDI?",  
+    "descricao": "Spoiler: não é \\"só mais uma curso\\", aqui é prática de verdade",  
+    "cards": \[  
+      {  
+        "titulo": "Clareza na condução de sessões”  
+",  
+        "texto": "Você tem mais confiança ao conduzir as sessões sabendo por onde começar com aquele paciente."  
+      },  
+      {  
+        "titulo": "Da teoria para a prática",  
+        "texto": "Você sai do conhecimento dos livros e vai para a prática de verdade, com casos reais e discussões profundas sobre os bastidores da clínica não perfeita."  
+      },  
+      {  
+        "titulo": "Motivação em grupo",  
+        "texto": "Você se motiva a estudar, com metodologia ativa e com um grupo que te leva pra cima. Tem um lugar para dividir casos, dúvidas e vulnerabilidades, sem julgamento."  
+      },  
+      {  
+        "titulo": "Raciocínio clínico de verdade",  
+        "texto": "Formula o caso com clareza e escolhe cada intervenção sabendo por quê. Sem ficar refém de scripts."  
+      }  
+    \],  
+    "botao": "QUERO ENTRAR PARA A BENEDI"  
+  },
+
+  "oQueVaiEncontrar": {  
+    "titulo": "O que você vai encontrar ao entrar para Benedi?",  
+    "cards": \[  
+      {  
+        "titulo": "Desenvolvimento de competências",  
+        "texto": "Encontros ao vivo voltados para desenvolvimento de competências específicas com roleplay, análise de caso, análise de vinheta, dinâmicas, etc. Sempre com metodologia ativa. Não é mais curso que fica na sua prateleira."  
+      },  
+      {  
+        "titulo": "Definição de Metas colaborativas",  
+        "texto": "Definimos, juntas, quais competências, dificuldades e objetivos o grupo quer desenvolver."  
+      },  
+      {  
+        "titulo": "Crescer em comunidade",  
+        "texto": "- Encontros de Clube do livro, ao vivo. Esse é nosso lugar seguro para compartilhar dificuldades e vulnerabilidades.  
+\- Sessões de body doubling para focar junto sem procrastinação  
+"  
+      },  
+      {  
+        "titulo": "Acesso às aulas gravadas",  
+        "texto": "Os encontros de desenvolvimento de competências ficam disponíveis em uma pltaforma."  
+      },  
+      {  
+        "titulo": "Gamificação do desenvolvimento",  
+        "texto": "Um jeito leve de acompanhar seu desenvolvimento: você registra quando assiste aos encontros, leva casos, executa planos de ação e também realiza práticas de autocuidado. Afinal, ser uma boa psicóloga envolve múltiplos fatores\!"  
+      },  
+      {  
+        "titulo": "Acesso à biblioteca de técnicas, questionários e escalas",  
+        "texto": "Materiais prontos para você editar e utilizar durante os atendimentos."  
+      },  
+      {  
+        "titulo": "Grupo no whatsapp para networking",  
+        "texto": "Grupo geral reunindo membros da Benedi, favorecendo troca de experiências e conexões profissionais."  
+      },  
+      {  
+        "titulo": "Rotina Compartilhada",  
+        "texto": "Temos um app onde compartilhamos nossa rotina de bastidores da clínica e de cuidado próprio. É uma forma de nos aproximar e de incentivar umas as outras. Afinal, uma psi não se faz só com raciocínio clínico."  
+      }  
+    \]  
+  },
+
+  "naoEstaSozinha": {  
+    "titulo": "Aprendizado contínuo com foco na prática e construído em conjunto, porque a clínica \<span class=\\"highlight\\"\>não\</span\> \<span class=\\"highlight\\"\>precisa\</span\> (nem deve) ser solitária.",  
+    "botao": "QUERO ENTRAR PARA A BENEDI"  
+  },
+
+  "participacaoAtiva": {  
+    "titulo": "Na Benedi, você não vai só assistir aula, você participa ativamente\!",  
+    "descricao": "Nossa metodologia é \<span\>ativa\</span\> e pensada para que você tenha resultados reais no desenvolvimento clínico, afinal, ninguém cresce só assistindo aula de maneira passiva.",  
+    "destaque": "Cresce quem se \<span class=\\"highlight-b\\"\>MOVIMENTA\</span\> e \<span class=\\"highlight-p\\"\>EXECUTA\</span\>. Por isso, incluímos em todos os encontros pelo menos um ou mais métodos de aprendizagem: exercícios, estudos de caso, role-plays, análise de gravação de sessão, jogos, etc.",  
+    "itens": \[  
+      { "titulo": "Role-plays" },  
+      { "titulo": "Casos Reais" },  
+      { "titulo": "Dinâmicas" },  
+      { "titulo": "Gamificação" }  
+    \]  
+  },
+
+  "precos": {  
+    "titulo": "Formatos de participação na Benedi",  
+    "descricao": "Você pode escolher como viver sua experiência, de acordo com seu momento profissional e disponibilidade:",  
+    "planos": \[  
+      {  
+        "nome": "TRIMESTRAL",  
+        "parcelas": "3x",  
+        "valor": "R\$150",  
+        "beneficios": \[  
+          "Aulas ao vivo quinzenalmente",  
+          "Aulas gravadas na plataforma",  
+          “Encontros de clube do livro com leituras de psicoeducação”  
+          "Acesso à biblioteca de ferramentas",  
+          "Autoavaliações trimestrais",  
+          "Grupo de whatsapp para networking",  
+          "Participação de gamificação e premiações "  
+          “Sessões de body doubling para foco”  
+        \],  
+        "botao": "QUERO TRÊS MESES"  
+      },  
+      {  
+        "nome": "SEMESTRAL",  
+        "selo": "⭐ MAIS ESCOLHIDO",  
+        "parcelas": "6x",  
+        "valor": "R\$120",  
+        "beneficios": \[  
+          "Aulas ao vivo quinzenalmente",  
+          "Aulas gravadas na plataforma (aulas anteriores)",  
+          “Encontros de clube do livro com leituras de psicoeducação”  
+          "Acesso à biblioteca de ferramentas",  
+          "Autoavaliações trimestrais",  
+          "Grupo de whatsapp para networking",  
+          "Participação de gamificação e premiações "  
+          “Sessões de body doubling para foco”  
+            
+        \],  
+        "botao": "QUERO SEIS MESES"  
+"descricao": "Economia de R\$180",
+
+  "titulo": Você tem 7 dias para viver a Benedi por dentro. Se sentir que não é pra você, devolvemos 100% do valor. 
+
+      }  
+    \]  
+  },
+
+  "plataforma": {  
+    "titulo": "Assista \<span class=\\"highlight-b highlight\\"\>quando\</span\> e \<span class=\\"highlight-p highlight\\"\>onde\</span\> quiser",  
+    "descricao": "Você poderá assistir, e reassistir, os encontros diretamente da plataforma.",  
+    "itens": \[  
+      { "texto": "Acesso pelo celular" },  
+      { "texto": "Acesso pelo computador" },  
+      { "texto": "Aulas sempre disponíveis" }  
+    \]  
+  },
+
+  "sobreNat": {  
+    "titulo": "Sobre a Fundadora",  
+    "subtitulo": "Conheça a psicóloga e supervisora por trás da BENEDI",  
+    "paragrafos": \[  
+      "Oi, eu me chamo Natércia, mas pode me chamar de Nat\!
+
+Sou psicóloga clínica, professora e supervisora e empreendedora.criei a BENEDI, porque sempre senti falta de um espaço para compartilhar os dilemas da clínica da vida real. Eu entendi, ao longo desses anos atendendo que o qye sustenta uma clínica segura e valorizada são três coisas: raciocinío clínico, autodesenvolvimento e cuidado próprio. Entendi também qu eé muito mais dificil manter uma rotina focada, quando se cresce sozinha. Hoje, a Benedi existe pra elevar conhecimento e psicólogas, enquanto compartilhamos a clinica da vida real.
+
+"  
+    \]  
+  },
+
+  "trajetoria": {  
+    "titulo": "Essa é minha trajetória:",  
+    "itens": \[  
+      "Terapeuta certificada pela FBTC",  
+      "Treinamento em supervisão pelo Beck Institute",  
+      "Coautora do recurso "Além dos Extremos" publicado pela Sinopsys",  
+      "Pesquisadora nas horas vagas",  
+      "Especialista em Terapia Cognitivo Comportamental",  
+      "Formação em Intervenções em Ansiedade, TCC, DBT e ACT;",  
+      "Criadora do \\"Dominando o TAG (DT)\\";",  
+    \]  
+  },
+
+  "depoimentos": {  
+    "titulo": "O que as \<span\>empáticas\</span\> e \<span\>estratégicas\</span\> (nossas alunas) estão falando",  
+    "descricao": "Histórias reais de transformação profissional",  
+    "cards": \[  
+      {  
+        "nome": "Isabella Fontenele",  
+        "profissao": "Psicóloga",  
+        "depoimento": \[  
+          "A sensação que eu fiquei depois da supervisão foi tipo como se tivesse \\"desatado um nó\\" na minha cabeça. Cheguei com várias duvidas e sem saber por onde começar e saí com um plano bem delineado. A Nat consegue ser super prática ao mesmo tempo em que acolhe as nossas dificuldades.",  
+          "Além disso, tudo é discutido em equipe e de maneira que faça sentido para a gente e para o paciente. Realmente faz diferença para o nosso raciocínio clínico\!\!"  
+        \]  
+      },  
+      {  
+        "nome": "Dalila Rodrigues",  
+        "profissao": "Psicóloga",  
+        "depoimento": \[  
+          "Nat, tenho gostado muito dos encontros de competências. Eles têm sido desafiadores, mas ao mesmo tempo me sinto segura para estar vulnerável como vocês e não precisar ter todas as respostas. Isso faz muito sentido pra mim, tanto clínica quanto profissionalmente.",  
+          "Além disso, a troca com o grupo e com as meninas tem sido muito rica, a ponto de eu reorganizar meus horários de segunda pra conseguir estar presente haha"  
+        \]  
+      },  
+      {  
+        "nome": "Mila Silveira",  
+        "profissao": "Psicóloga",  
+        "depoimento": \[  
+          "Eu já conhecia o trabalho da Nat faz um tempo, mas nunca tinha tido a experiência de ser sua supervisionada. Hoje eu posso dizer que, realmente, ela é tudo isso que a gente ver nas redes sociais (ou até mais)\!",  
+          "Ela sabe muito sobre raciocínio clínico e teoria, isso me ajudou DEMAIS com meus pacientes. Além de ser uma pessoa super empática, acolhedora e humana. Tem sido uma oportunidade incrível e que eu não abro mão\!"  
+        \]  
+      }  
+    \],  
+    "botao": "QUERO ENTRAR PARA A BENEDI"  
+  },
+
+  "duvidasFaq": {  
+    "titulo": "Dúvidas? A gente responde",  
+    "descricao": "As perguntas que todo mundo faz (e que você provavelmente tá pensando também)",  
+    "perguntas": \[  
+      {  
+        "pergunta": "Como funcionam os encontros de competencia?",  
+        "resposta": "São encontros focados em desenvolver habilidades clínicas essenciais para a clínica como: raciocínio clínico, tomada de decisão, formulação de casos, estabelecimento de objetivos, saber o que priorizar no tratamento, etc. Tudo isso \<span class=\\"highlight\\"\>de forma PRÁTICA\</span\>, com role-plays, exercícios, vinhetas clínicas, etc."  
+      },  
+ {  
+        "pergunta": "Como funcionam os encontros do clube do livro?",  
+        "resposta": "Periodicamente, selecionamos um livro psicoeducativo (daqueles que indicamos para pacientes) para lermos e discutirmos juntas. Nesses encontros, rasgamos nosso coração, compartilhar reflexões sobre si, estratégias que usamos pra driblar e vamos nos ajudando [mutuamente.Al](http://mutuamente.Al)ém de associar a alguns casos, claro (mas, isso não é a prioridade. é hora de olhar pra si)},
+
+      {  
+        "pergunta": "Quando acontecem os encontros ao vivo?",  
+        "resposta": "Os encontros acontecem de forma quinzenal, nas \<span class=\\"highlight\\"\>quintas às 10h\</span\>. Caso você não consiga participar, as aulas \<span class=\\"highlight\\"\>ficam gravadas\</span\> na plataforma para assistir quando puder."  
+      },  
+      {  
+        "pergunta": "Quais aulas encontro dentro da BENEDI?",  
+        "resposta": "\<span class=\\"highlight\\"\>Todas as aulas envolvem PBE\</span\> e competências/ habilidades que todo psi precisa ter para uma clínica de excelência.. Algumas aulas que já temos disponíveis são: “como estabelecer objetivos em terapia?”, “por onde começar a intervir?”, “como desenvolver um raciocínio clínico de excelência?”."  
+      },  
+      {  
+        "pergunta": "Como tenho acesso ao produto?",  
+        "resposta": "Após a inscrição, você recebe por e-mail \<span class=\\"highlight\\"\>acesso à plataforma Kiwify\</span\>, onde ficam as aulas gravadas e materiais complementares. Os encontros ao vivo acontecem via Zoom e os links são enviados por whatsapp."  
+      },  
+      {  
+        "pergunta": "Eu estou cheia de demandas, será que dou conta da BENEDI?",  
+        "resposta": "As aulas \<span class=\\"highlight\\"\>acontecem ao vivo e ficarão gravadas\</span\>. Sendo assim, você consegue assistir de onde quiser, a hora que quiser, adaptando à sua rotina."  
+      },  
+      {  
+        "pergunta": "Preciso ser da TCC para participar?",  
+        "resposta": "\<span class=\\"highlight\\"\>Nosso foco é PBE.\</span\> Na Benedi, passeamos por todas as abordagens empiricamente sustentadas: TCC, DBT, ACT, etc."  
+      },  
+      {  
+        "pergunta": "Eu tenho garantia?",  
+        "resposta": "Independente do plano, \<span class=\\"highlight\\"\>você tem garantia de 7 dias\</span\>. Se voce sentir que a BENEDI não é pra você, devolvemos seu investimento. Depois desse período, o valor não é reembolsável, mas você mantém todos os benefícios até o fim do período que pagou."  
+      },  
+      {  
+        "pergunta": "Por quanto tempo terei de acesso?",  
+        "resposta": "Seu acesso é válido de acordo com o plano escolhido. \<span class=\\"highlight\\"\>No plano trimestral\</span\>, você tem acesso durante os 3 meses contratados. \<span class=\\"highlight\\"\>No plano semestral\</span\>, o acesso é válido por 6 meses. Em ambos, a renovação acontece de forma automática, garantindo continuidade no acompanhamento."  
+      },  
+      {  
+        "pergunta": "Posso cancelar a qualquer momento?",  
+        "resposta": "Sim. Como a BENEDI funciona no formato de \<span class=\\"highlight\\"\>assinatura\</span\>, a renovação é automática, na conclusão do seu plano, mas você pode \<span class=\\"highlight\\"\>cancelar quando quiser\</span\>. Após o cancelamento, você mantém o acesso até o final do período já pago, sem novas cobranças."  
+      },  
+      {  
+        "pergunta": "Recebo certificado?",  
+        "resposta": "Sim. \<span class=\\"highlight\\"\>É possível solicitar\</span\> emissão de certificado."  
+      },  
+      {  
+        "pergunta": "Qual a forma de pagamento?",  
+        "resposta": "O pagamento é feito \<span class=\\"highlight\\"\>via cartão de crédito\</span\>, no formato de \<span class=\\"highlight\\"\>assinatura\</span\>. O valor não consome o limite do cartão de uma vez, ou seja, uma nova cobrança é realizada \<span class=\\"highlight\\"\>mensalmente\</span\> mensalmente."  
+      }  
+    \]  
+  },
+
+  "rodape": {  
+    "titulo": "Clube de Psicólogas Empáticas e Estratégicas",  
+    "subtitulo": "Criado com cuidado por Natércia Sampaio",  
+    "copyright": "© 2025 BENEDI \- Todos os direitos reservados",  
+    "desenvolvidoPor": "Desenvolvido por \<a href=\\"https://www.bybia.dev\\" target=\\"\_blank\\" rel=\\"noopener noreferrer\\"\>ByBiaDEV\</a\>"  
+  }  
+}
+
