@@ -419,11 +419,22 @@ main {
   flex-direction: column;
   gap: 16px;
   padding: 24px;
-  background-color: rgba(var(--app-color-yellow-rgb), 0.15);
   border: 1px solid transparent;
   border-radius: 16px;
   text-align: left;
   transition: all 0.45s ease;
+}
+
+.welcome-card.card-blue {
+  background-color: var(--app-color-blue);
+}
+
+.welcome-card.card-pink {
+  background-color: var(--app-color-pink);
+}
+
+.welcome-card.card-yellow {
+  background-color: var(--app-color-yellow);
 }
 
 .welcome-card img {
@@ -434,13 +445,35 @@ main {
 }
 
 .welcome-card p:last-child {
-  color: var(--app-black-70);
   line-height: 1.4;
 }
 
+.welcome-card.card-blue p:last-child {
+  color: var(--app-color-blue-contrast);
+}
+
+.welcome-card.card-pink p:last-child {
+  color: var(--app-color-pink-contrast);
+}
+
+.welcome-card.card-yellow p:last-child {
+  color: var(--app-color-yellow-contrast);
+}
+
 .welcome-card:hover {
-  border-color: var(--app-color-blue);
   box-shadow: 4px 8px 12px var(--app-black-10);
+}
+
+.welcome-card.card-blue:hover {
+  border-color: var(--app-color-blue-shade);
+}
+
+.welcome-card.card-pink:hover {
+  border-color: var(--app-color-pink-shade);
+}
+
+.welcome-card.card-yellow:hover {
+  border-color: var(--app-color-yellow-shade);
 }
 
 .welcome-card:hover img {
@@ -2415,7 +2448,7 @@ footer {
   .about-cards-wrap {
     flex-direction: row;
     gap: 48px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .about-img {
@@ -2423,7 +2456,30 @@ footer {
   }
 
   .about-info-items {
-    max-width: 500px;
+    max-width: 540px;
+  }
+
+  .about-info-item {
+    padding: 40px 40px 40px 48px;
+  }
+
+  .about-info-item p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .about-info-item::before {
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 20px);
+    left: -20px;
+  }
+
+  .about-info-item::after {
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 15px);
+    left: -15px;
   }
 
   .dep-cards {
